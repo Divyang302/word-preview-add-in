@@ -5,54 +5,121 @@
     <meta charset="UTF-8">
     <title>Install Word Add-in</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: auto;
-            padding: 2rem;
+        :root {
+            --primary-color: #0056b3;
+            --bg-color: #f9f9fc;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        ol,
-        ul {
-            padding-left: 1.2rem;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 2rem 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            max-width: 720px;
+            width: 100%;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        ol {
+            padding-left: 1.4rem;
+            margin: 0;
+        }
+
+        ol>li {
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
         }
 
         a {
-            color: #0066cc;
-            font-weight: bold;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background: #eef1f6;
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .emoji {
+            margin-right: 0.5rem;
         }
     </style>
 </head>
 
 <body>
-    <h1>📄 Install the Word Add-in</h1>
-    <ol>
-        <li>
-            <p>📥 <a href="WordPreviewAddIn.vsto.txt" download>Click here to download the add-in file</a></p>
-        </li>
-        <li>
-            <p>📝 Rename the downloaded file from <code>WordPreviewAddIn.vsto.txt</code> to
-                <code>WordPreviewAddIn.vsto</code></p>
-        </li>
-        <li>
-            <p>🧩 Double-click the <code>.vsto</code> file to install the Word add-in</p>
-        </li>
-        <li>
-            <p>⚠️ If you see a security warning, follow these steps to trust the certificate:</p>
-            <ol>
-                <li><a href="word-add-in-certificate.cer" download>Download the certificate</a></li>
-                <li>Double-click it and click “Install Certificate”</li>
-                <li>Choose “Local Machine”</li>
-                <li>Select:
-                    <ul>
-                        <li><code>Trusted Root Certification Authorities</code></li>
-                        <li><code>Trusted Publishers</code></li>
-                    </ul>
-                </li>
-                <li>Click “Next” and then “Finish”</li>
-            </ol>
-        </li>
-    </ol>
+    <div class="container">
+        <h1>📄 Install the Word Add-in</h1>
+        <ol>
+            <li>
+                <span class="emoji">📥</span>
+                <a href="WordPreviewAddIn.vsto.txt" download>Download the add-in vsto txt file</a>
+            </li>
+            <li>
+                <span class="emoji">📥</span>
+                <a href="WordPreviewAddIn.vsto" download>Download the add-in vsto file</a>
+            </li>
+            <li>
+                <span class="emoji">📝</span>
+                Rename the file from <code>WordPreviewAddIn.vsto.txt</code> to <code>WordPreviewAddIn.vsto</code>
+            </li>
+            <li>
+                <span class="emoji">🧩</span>
+                Double-click the <code>.vsto</code> file to install the Word add-in
+            </li>
+            <li>
+                <span class="emoji">⚠️</span> If you see a security warning, follow these steps to trust the
+                certificate:
+                <ol>
+                    <li>
+                        <a href="word-add-in-certificate.cer" download>Download the certificate</a>
+                    </li>
+                    <li>Double-click it and click <strong>“Install Certificate”</strong></li>
+                    <li>Select <strong>“Local Machine”</strong> during setup</li>
+                    <li>Choose:
+                        <ul>
+                            <li><code>Trusted Root Certification Authorities</code></li>
+                            <li><code>Trusted Publishers</code></li>
+                        </ul>
+                    </li>
+                    <li>Click <strong>“Next”</strong> then <strong>“Finish”</strong></li>
+                </ol>
+            </li>
+        </ol>
+    </div>
 </body>
 
 </html>
