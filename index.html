@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Install Word Add-in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        ol,
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        a {
+            color: #0066cc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>📄 Install the Word Add-in</h1>
+    <ol>
+        <li>
+            <p>📥 <a href="WordPreviewAddIn.vsto.txt" download>Click here to download the add-in file</a></p>
+        </li>
+        <li>
+            <p>📝 Rename the downloaded file from <code>WordPreviewAddIn.vsto.txt</code> to
+                <code>WordPreviewAddIn.vsto</code></p>
+        </li>
+        <li>
+            <p>🧩 Double-click the <code>.vsto</code> file to install the Word add-in</p>
+        </li>
+        <li>
+            <p>⚠️ If you see a security warning, follow these steps to trust the certificate:</p>
+            <ol>
+                <li><a href="word-add-in-certificate.cer" download>Download the certificate</a></li>
+                <li>Double-click it and click “Install Certificate”</li>
+                <li>Choose “Local Machine”</li>
+                <li>Select:
+                    <ul>
+                        <li><code>Trusted Root Certification Authorities</code></li>
+                        <li><code>Trusted Publishers</code></li>
+                    </ul>
+                </li>
+                <li>Click “Next” and then “Finish”</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+
+</html>
