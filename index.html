@@ -1,121 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Install Word Add-in</title>
     <style>
-        :root {
-            --primary-color: #0056b3;
-            --bg-color: #f9f9fc;
-            --card-bg: #ffffff;
-            --border-radius: 12px;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
+      :root {
+        --primary-color: #0056b3;
+        --bg-color: #f9f9fc;
+        --card-bg: #ffffff;
+        --border-radius: 12px;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+      }
 
-        .container {
-            background-color: var(--card-bg);
-            padding: 2rem 2.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            max-width: 720px;
-            width: 100%;
-            color: #333;
-        }
+      .container {
+        background-color: var(--card-bg);
+        padding: 2rem 2.5rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        max-width: 720px;
+        width: 100%;
+        color: #333;
+      }
 
-        h1 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+      h1 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
 
-        ol {
-            padding-left: 1.4rem;
-            margin: 0;
-        }
+      ol {
+        padding-left: 1.4rem;
+        margin: 0;
+      }
 
-        ol>li {
-            margin-bottom: 1.2rem;
-            line-height: 1.6;
-        }
+      ol > li {
+        margin-bottom: 1.2rem;
+        line-height: 1.6;
+      }
 
-        a {
-            color: var(--primary-color);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
+      a {
+        color: var(--primary-color);
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
 
-        a:hover {
-            text-decoration: underline;
-        }
+      a:hover {
+        text-decoration: underline;
+      }
 
-        code {
-            background: #eef1f6;
-            padding: 2px 6px;
-            border-radius: 6px;
-            font-size: 0.95em;
-        }
+      code {
+        background: #eef1f6;
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-size: 0.95em;
+      }
 
-        ul {
-            padding-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
+      ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+      }
 
-        .emoji {
-            margin-right: 0.5rem;
-        }
+      .emoji {
+        margin-right: 0.5rem;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>📄 Install the Word Add-in</h1>
-        <ol>
-            <li>
-                <span class="emoji">📦</span>
-                <a href="WordAddIn.zip" download>Download full add-in package (.zip)</a>
-                <ul>
-                    <li>Contains the .vsto file, application files folder, and certificate</li>
-                    <li>Extract to any folder (e.g., <code>C:\WordAddinInstall</code>)</li>
-                </ul>
-            </li>
-            <li>
-                <span class="emoji">🧩</span>
-                Double-click the <code>.vsto</code> file to install the Word add-in
-            </li>
-            <li>
-                <span class="emoji">⚠️</span> If you see a security warning, follow these steps to trust the
-                certificate:
-                <ol>
-                    <li>
-                        <a href="word-add-in-certificate.cer" download>Download the certificate</a>
-                    </li>
-                    <li>Double-click it and click <strong>“Install Certificate”</strong></li>
-                    <li>Select <strong>“Local Machine”</strong> during setup</li>
-                    <li>Choose:
-                        <ul>
-                            <li><code>Trusted Root Certification Authorities</code></li>
-                            <li><code>Trusted Publishers</code></li>
-                        </ul>
-                    </li>
-                    <li>Click <strong>“Next”</strong> then <strong>“Finish”</strong></li>
-                </ol>
-            </li>
-        </ol>
-    </div>
-</body>
+      <h1>📄 Install the Word Add-in</h1>
 
+      <h2>Option A: Automatic (recommended)</h2>
+      <ol>
+        <li>
+          <a href="WordAddIn.zip" download>Download the package (.zip)</a> and
+          extract it to a folder (e.g. <code>C:\WordAddinInstall</code>)
+        </li>
+        <li>Close Word, then double-click <code>Install.bat</code></li>
+        <li>
+          Click <strong>Yes</strong> when Windows asks for permission. This
+          trusts the certificate
+        </li>
+        <li>
+          The installer starts. Click <strong>Install</strong>, then open Word
+        </li>
+      </ol>
+
+      <h2>Option B: Manual</h2>
+      <ol>
+        <li>
+          <a href="word-add-in-certificate.cer" download
+            >Download the certificate</a
+          >
+        </li>
+        <li>
+          Double-click it → <strong>Install Certificate</strong> →
+          <strong>Local Machine</strong>. Install it into both
+          <code>Trusted Publishers</code> and
+          <code>Trusted Root Certification Authorities</code>
+        </li>
+        <li>
+          Close Word, then install the add-in in one of these ways:
+          <ul>
+            <li>
+              Open the <a href="WordPreviewAddIn.vsto">.vsto link</a> in
+              <strong>Microsoft Edge</strong>, or
+            </li>
+            <li>
+              <a href="WordAddIn.zip" download>Download the package (.zip)</a>,
+              extract it, and double-click <code>WordPreviewAddIn.vsto</code>
+            </li>
+          </ul>
+          If the add-in doesn't install, run
+          <a href="setup.exe">setup.exe</a> instead. It also installs any
+          missing prerequisites.
+        </li>
+        <li>Open Word. The add-in appears in the ribbon</li>
+      </ol>
+
+      <h2>Updating or reinstalling</h2>
+      <ul>
+        <li>
+          Close Word and uninstall <strong>MorasalaTec Add In</strong> in
+          Settings → Apps first
+        </li>
+        <li>Then use either option above</li>
+      </ul>
+    </div>
+  </body>
 </html>
