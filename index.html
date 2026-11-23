@@ -66,8 +66,15 @@
       }
 
       ol > li {
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.4rem;
         line-height: 1.6;
+      }
+
+      .why {
+        display: block;
+        margin-top: 0.3rem;
+        font-size: 0.93em;
+        color: #555;
       }
 
       a {
@@ -99,21 +106,50 @@
         Go to <strong>Start menu → Add or remove programs</strong> and search
         for <strong>MorasalaTec Add In</strong>. If it is installed,
         <strong>uninstall it first</strong>, then follow the steps below.
+        <span class="why">
+          Why: an older version can conflict with the new one and cause the
+          install to fail.
+        </span>
       </div>
 
       <h2>Automatic install</h2>
       <ol>
         <li>
-          <a href="WordAddIn.zip" download>Download the package (.zip)</a> and
-          extract it to a folder (e.g. <code>C:\WordAddinInstall</code>)
+          <strong>Download and extract the package.</strong>
+          <a href="WordAddIn.zip" download>Download the package (.zip)</a>, then
+          extract it to a simple folder such as
+          <code>C:\WordAddinInstall</code>.
+          <span class="why">
+            Why: the installer needs all the files together in one folder, and
+            a short path without spaces avoids errors.
+          </span>
         </li>
-        <li>Close Word, then double-click <code>Install.bat</code></li>
         <li>
-          Click <strong>Yes</strong> when Windows asks for permission. This
-          trusts the certificate
+          <strong>Close Word, then double-click <code>Install.bat</code>.</strong>
+          <span class="why">
+            Why: Word must be closed so the add-in can register with it
+            correctly.
+          </span>
         </li>
         <li>
-          The installer starts. Click <strong>Install</strong>, then open Word
+          <strong>Click Yes when Windows asks for administrator permission.</strong>
+          This adds the included MorasalaTec certificate to Windows' trusted
+          certificate stores.
+          <span class="why">
+            Why: this add-in is signed with its own certificate, not one from a
+            commercial authority. Windows only installs add-ins whose signer it
+            trusts, so this one-time step tells Windows to trust it. The
+            certificate is used only for this add-in, and you can remove it
+            later from the Windows certificate manager if you wish.
+          </span>
+        </li>
+        <li>
+          <strong>Click Install, then open Word.</strong>
+          The installer starts automatically after the certificate is added.
+          <span class="why">
+            Why: this registers the add-in with Word. It will appear in the
+            ribbon the next time Word opens.
+          </span>
         </li>
       </ol>
     </div>
