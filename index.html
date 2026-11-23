@@ -40,6 +40,26 @@
         gap: 0.5rem;
       }
 
+      h2 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin: 1.5rem 0 0.8rem;
+      }
+
+      .notice {
+        background: #fff8e1;
+        border-left: 4px solid #f5a623;
+        border-radius: 8px;
+        padding: 1rem 1.2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .notice strong.title {
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
       ol {
         padding-left: 1.4rem;
         margin: 0;
@@ -67,15 +87,6 @@
         border-radius: 6px;
         font-size: 0.95em;
       }
-
-      ul {
-        padding-left: 1.5rem;
-        margin-top: 0.5rem;
-      }
-
-      .emoji {
-        margin-right: 0.5rem;
-      }
     </style>
   </head>
 
@@ -83,7 +94,14 @@
     <div class="container">
       <h1>📄 Install the Word Add-in</h1>
 
-      <h2>Option A: Automatic (recommended)</h2>
+      <div class="notice">
+        <strong class="title">⚠️ Before you install</strong>
+        Go to <strong>Start menu → Add or remove programs</strong> and search
+        for <strong>MorasalaTec Add In</strong>. If it is installed,
+        <strong>uninstall it first</strong>, then follow the steps below.
+      </div>
+
+      <h2>Automatic install</h2>
       <ol>
         <li>
           <a href="WordAddIn.zip" download>Download the package (.zip)</a> and
@@ -98,47 +116,6 @@
           The installer starts. Click <strong>Install</strong>, then open Word
         </li>
       </ol>
-
-      <h2>Option B: Manual</h2>
-      <ol>
-        <li>
-          <a href="word-add-in-certificate.cer" download
-            >Download the certificate</a
-          >
-        </li>
-        <li>
-          Double-click it → <strong>Install Certificate</strong> →
-          <strong>Local Machine</strong>. Install it into both
-          <code>Trusted Publishers</code> and
-          <code>Trusted Root Certification Authorities</code>
-        </li>
-        <li>
-          Close Word, then install the add-in in one of these ways:
-          <ul>
-            <li>
-              Open the <a href="WordPreviewAddIn.vsto">.vsto link</a> in
-              <strong>Microsoft Edge</strong>, or
-            </li>
-            <li>
-              <a href="WordAddIn.zip" download>Download the package (.zip)</a>,
-              extract it, and double-click <code>WordPreviewAddIn.vsto</code>
-            </li>
-          </ul>
-          If the add-in doesn't install, run
-          <a href="setup.exe">setup.exe</a> instead. It also installs any
-          missing prerequisites.
-        </li>
-        <li>Open Word. The add-in appears in the ribbon</li>
-      </ol>
-
-      <h2>Updating or reinstalling</h2>
-      <ul>
-        <li>
-          Close Word and uninstall <strong>MorasalaTec Add In</strong> in
-          Settings → Apps first
-        </li>
-        <li>Then use either option above</li>
-      </ul>
     </div>
   </body>
 </html>
